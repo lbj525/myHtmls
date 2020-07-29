@@ -1,0 +1,22 @@
+table {
+  margin: 150px 100px;
+  border: 1px greenyellow solid;
+  border-collapse: collapse;
+  width: 500px;
+  height: 50px;
+
+}
+
+#head {
+  background-color: aquamarine;
+}
+
+td {
+  border: 1px greenyellow solid;
+  text-align: center;
+}
+
+h3 {
+  float: right;
+  margin: 100px 150px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>再写购物车</title>
+  <link rel="stylesheet" href="shoppingCar.css">
+
+
+</head>
+
+<body>
+  <div class="shoppingCar">
+    <table>
+      <tr id="head">
+        <td>编号</td>
+        <td>书籍名称</td>
+        <td>出版日期</td>
+        <td>价格</td>
+        <td>购买数量</td>
+        <td>操作</td>
+      </tr>
+      <tbody v-for="(book,index) in books">
+        <td>{{index+1}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.date}}</td>
+        <td>{{book.price|showPrice}}</td>
+        <td>
+          <button @click="decrement(index)">-</button>
+          {{book.count}}
+          <button @click="increment(index)">+</button>
+        </td>
+        <td><button @click="del(index)">移除</button></td>
+      </tbody>
+    </table>
+    <h3>总价为：{{totalPrice |showPrice}}</h3>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script src="shoppingCar.js"></script>
+</body>
+
+</html>
